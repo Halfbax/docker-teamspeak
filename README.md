@@ -1,4 +1,6 @@
 # docker-teamspeak
+[![Docker Pulls](https://img.shields.io/docker/pulls/halfbax/docker-teamspeak.svg?style=for-the-badge)](https://hub.docker.com/r/halfbax/docker-teamspeak/) [![Docker Build Status](https://img.shields.io/docker/build/halfbax/docker-teamspeak.svg?style=for-the-badge)](https://hub.docker.com/r/halfbax/docker-teamspeak/)  
+  
 Docker image for teamspeak 3 server  
 based on debian stretch
 
