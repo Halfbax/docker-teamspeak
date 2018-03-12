@@ -6,7 +6,11 @@ chmod +x ./teamspeak3-server_linux_amd64/ts3server_minimal_runscript.sh
 
 if [ -n "$LICENSE" ]; then
     if [ "$LICENSE" = "accept" ]; then
-        touch ./teamspeak3-server_linux_amd64/.ts3server_license_accepted
+        if [ -d ./mounted ]; then
+            touch ./mounted/.ts3server_license_accepted
+        else
+            touch ./teamspeak3-server_linux_amd64/.ts3server_license_accepted
+        fi
     fi
 fi
 
@@ -23,4 +27,4 @@ if [ -d ./mounted ]; then
     startARGS="logpath=/usr/local/teamspeak/mounted/logs licensepath=/usr/local/teamspeak/mounted/"
 fi
 
-./teamspeak3-server_linux_amd64/ts3server_minimal_runscript.sh $startARGS
+exec ./teamspeak3-server_linux_amd64/ts3server_minimal_runscript.sh $startARGS
