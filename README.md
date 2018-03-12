@@ -16,9 +16,6 @@ docker run -d --name teamspeak \
 After your first run you can delete **-e LICENSE=accept** from your start command.
 
 
-----------
-
-
 **License agreement**
 
 On your **first run** without an imported agreement you have to accept it by running this once.
@@ -27,18 +24,12 @@ docker run -d --name teamspeak -e LICENSE=accept ...
 ```
 
 
-----------
-
-
 **Persitent storage** 
 
 */usr/local/teamspeak/mounted* is **static**. Do not modify this value unless you know what you are doing.
 ```
 docker run -d --name teamspeak -v /home/mountme/:/usr/local/teamspeak/mounted ...
 ```
-
-
-----------
 
 
 **Ports**
