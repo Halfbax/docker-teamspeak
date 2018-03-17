@@ -1,0 +1,13 @@
+version: '3'
+services:
+  teamspeak:
+    image: halfbax/docker-teamspeak
+    volumes:
+      - /home/mountme/:/usr/local/teamspeak/mounted
+    ports:
+      - "9987:9987/udp"
+      - "2010:2010/udp"
+      - "30033:30033"
+      - "10011:10011"
+      - "41144:41144"
+      - "2008:2008"
